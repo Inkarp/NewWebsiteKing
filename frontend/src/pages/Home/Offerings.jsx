@@ -72,7 +72,7 @@ export default function Offerings() {
               <img src={item.image} alt={item.title} className="h-48 w-full object-cover" />
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-semibold text-blue-800 mb-3">{item.title}</h3>
-                <ul className="list-disc list-inside space-y-2 text-gray-700 text-sm flex-grow">
+                <ul className="list-disc font-semibold list-inside space-y-2 text-gray-700 text-sm flex-grow">
                   {item.points.map((point, idx) => (
                     <li key={idx}>{point}</li>
                   ))}

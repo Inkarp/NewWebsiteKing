@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import Logo from '/Logo.png';
 import { NavLink, Link } from 'react-router-dom';
-import { FaBars, FaPhoneAlt, FaTimes } from 'react-icons/fa';
+import { FaBars, FaPhoneAlt, FaTimes, FaDownload } from 'react-icons/fa';
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  // Scroll detection for sticky styling
+  // Sticky scroll effect
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
@@ -17,7 +17,7 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Home', path: '/' },   
+    { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     { name: 'Services', path: '/services' },
     { name: 'Contact Us', path: '/contact' }
@@ -35,7 +35,7 @@ const Header = () => {
           <img src={Logo} alt="Kingdom Logo" className="h-16 w-32" />
         </Link>
 
-        {/* Desktop Navigation */}
+        {/* Desktop Nav */}
         <nav className="hidden md:flex space-x-8 font-medium text-gray-800">
           {navLinks.map((link) => (
             <NavLink
@@ -52,16 +52,26 @@ const Header = () => {
           ))}
         </nav>
 
-        {/* Call Now Button */}
-        <a
-          href="tel:+917661956771"
-          className="hidden md:flex items-center bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg space-x-2"
-        >
-          <FaPhoneAlt className="text-sm" />
-          <span>Call Now</span>
-        </a>
+        {/* Call Now + Brochure on Desktop */}
+        <div className="hidden md:flex items-center space-x-4">
+          <a
+            href="tel:+917661956771"
+            className="flex items-center bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg space-x-2"
+          >
+            <FaPhoneAlt className="text-sm" />
+            <span>Call Now</span>
+          </a>
+          <a
+            href="/KingdomBrochure.pdf" // Ensure this file is in your public folder
+            download
+            className="flex items-center bg-blue-100 hover:bg-blue-200 text-blue-800 px-4 py-2 rounded-lg space-x-2 font-medium"
+          >
+            <FaDownload />
+            <span>Download Brochure</span>
+          </a>
+        </div>
 
-        {/* Mobile Toggle */}
+        {/* Mobile Menu Toggle */}
         <button
           className="md:hidden text-2xl text-gray-800"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -88,12 +98,21 @@ const Header = () => {
                 {link.name}
               </NavLink>
             ))}
+
             <a
               href="tel:+917661956771"
               className="flex items-center bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg space-x-2"
             >
               <FaPhoneAlt />
               <span>Call Now</span>
+            </a>
+            <a
+              href="/KingdomBrochure.pdf"
+              download
+              className="flex items-center bg-blue-100 hover:bg-blue-200 text-blue-800 px-4 py-2 rounded-lg space-x-2"
+            >
+              <FaDownload />
+              <span>Download Brochure</span>
             </a>
           </nav>
         </div>

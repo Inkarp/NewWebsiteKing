@@ -2,6 +2,11 @@ import Hero from "./Home/Hero";
 import Offerings from "./Home/Offerings";
 import Testimonials from "./Home/Testimonials";
 import WhyChooseUs from "./Home/WhyChooseUs";
+import GraduatePrograms from "./Services/GraduatePrograms";
+import PGPrograms from "./Services/PGPrograms";
+import SignaturePrograms from "./Services/SignaturePrograms";
+import SkillCoursesSection from "./Services/SkillBasedPrograms";
+import WhyKingdomIsDifferent from "./Services/WhyKingdomIsDiffernet";
 
 const Home = () => (
   <section className="p-8">
@@ -11,7 +16,12 @@ const Home = () => (
     </p> */}
     <Hero />
     <WhyChooseUs />
-    <Offerings /> 
+    <Offerings />
+    <SignaturePrograms />
+    <GraduatePrograms />
+    <PGPrograms />
+    <SkillCoursesSection />
+    <WhyKingdomIsDifferent />
     <Testimonials />
   </section>
 );
