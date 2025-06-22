@@ -8,6 +8,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Header from './pages/Header';
 import Footer from './pages/Footer';
+import ScrollToTop from './ScrollToTop';
 
 function App() {
   const [blink, setBlink] = useState(false);
@@ -15,14 +16,17 @@ function App() {
   useEffect(() => {
     const interval = setInterval(() => {
       setBlink(true);
-      setTimeout(() => setBlink(false), 1000); // blink duration
-    }, 5000); // every 5 seconds
+      setTimeout(() => setBlink(false), 1000);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
     <Router>
+      {/* 👇 Place inside Router */}
+      <ScrollToTop />
+
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -32,7 +36,7 @@ function App() {
       </Routes>
       <Footer />
 
-      {/* WhatsApp Icon - Bottom Right */}
+      {/* WhatsApp Icon */}
       <a
         href="https://wa.me/917661956771"
         target="_blank"

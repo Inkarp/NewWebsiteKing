@@ -6,10 +6,10 @@ import WhyKingdomIsDifferent from "./Services/WhyKingdomIsDiffernet";
 export default function Services() {
     return (
   <section className="p-8">
-    <SignaturePrograms />
+    {/* <SignaturePrograms />
     <GraduatePrograms />
     <PGPrograms />
-    <WhyKingdomIsDifferent />
+    <WhyKingdomIsDifferent /> */}
   </section>
 );
 }
