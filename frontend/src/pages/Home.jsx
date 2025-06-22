@@ -1,5 +1,6 @@
 import Hero from "./Home/Hero";
 import Offerings from "./Home/Offerings";
+import Testimonials from "./Home/Testimonials";
 import WhyChooseUs from "./Home/WhyChooseUs";
 
 const Home = () => (
@@ -11,6 +12,7 @@ const Home = () => (
     <Hero />
     <WhyChooseUs />
     <Offerings /> 
+    <Testimonials />
   </section>
 );
 
