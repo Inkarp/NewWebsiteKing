@@ -18,9 +18,6 @@ const Home = () => (
     <Hero />
     <WhyChooseUs />
     <Offerings />
-    <SignaturePrograms />
-    <GraduatePrograms />
-    <PGPrograms />
     <SkillCoursesSection />
     <InstitutionalCollaboration />
     <WhyKingdomIsDifferent />

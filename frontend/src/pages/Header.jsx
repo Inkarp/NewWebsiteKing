@@ -32,7 +32,7 @@ const Header = () => {
       <div className="px-6 py-3 flex items-center justify-between max-w-7xl mx-auto">
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-2">
-          <img src={Logo} alt="Kingdom Logo" className="h-16 w-32" />
+          <img src={Logo} alt="Kingdom Logo" className="h-16 w-auto" />
         </Link>
 
         {/* Desktop Nav */}
