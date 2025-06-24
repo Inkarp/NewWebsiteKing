@@ -22,9 +22,8 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-1/2 transform -translate-x-1/2  z-50 bg-white transition-all duration-300 ease-in-out ${scrolled ? 'shadow-md top-1 rounded-lg w-[96%]' : 'shadow-lg rounded-lg w-full'
+      className={`fixed top-0 left-1/2 transform -translate-x-1/2  z-50  transition-all duration-300 ease-in-out ${scrolled ? 'shadow-md top-1 rounded-lg w-[96%]' : 'bg-gray-300 shadow-lg rounded-lg w-full'
         }`}
-
 
       style={{ fontFamily: "'Playfair Display', serif" }}
     >

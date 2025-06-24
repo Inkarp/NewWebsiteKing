@@ -6,15 +6,23 @@ import { Link } from 'react-router-dom';
 
 const slides = [
   {
-    quote: `"Every student is a seed of greatness. Kingdom EdTech is here to water that seed and make it a mighty tree."`,
+    quote: `"Kingdom Edutech is not just an institute — it's a turning point.”`,
     image: Logo,
   },
   {
-    quote: `"We don’t just teach. We inspire learning. We don’t just train for exams. We prepare for life."`,
+    quote: `"Real success begins when you learn what schools don’t teach.."`,
     image: Logo,
   },
   {
-    quote: `"Learn – Practical skills, Grow – Emotionally & spiritually, Believe – In your purpose."`,
+    quote: `“With the right skills, even an average student can build an extraordinary future.”`,
+    image: Logo,
+  },
+  {
+    quote: `“Don’t wait for the world to give you a chance — learn the skills to create your own.”`,
+    image: Logo,
+  },
+  {
+    quote: `“You don’t need to be a topper to lead. You just need the right direction.”`,
     image: Logo,
   },
 ];
