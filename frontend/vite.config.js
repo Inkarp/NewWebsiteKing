@@ -11,5 +11,11 @@ export default defineConfig({
   },
   optimizeDeps: {
   include: ['framer-motion'],
+},
+extend: {
+  fontFamily: {
+    brand: ['"Playfair Display"', 'serif']
+  }
 }
+
 })
