@@ -23,7 +23,7 @@ const Header = () => {
   return (
     <header
   className={`fixed top-0 left-1/2 transform -translate-x-1/2 w-[90%] z-50 bg-white transition-all duration-300 ease-in-out ${
-    scrolled ? 'shadow-md top-5 border rounded-lg' : 'shadow-lg'
+    scrolled ? 'shadow-md top-3 rounded-lg' : 'shadow-lg'
   }`}
 
 
@@ -32,7 +32,8 @@ const Header = () => {
       <div className="px-6 py-3 flex items-center justify-between max-w-7xl mx-auto">
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-2">
-          <img src={Logo} alt="Kingdom Logo" className="h-16 w-auto" />
+          {/* <img src={Logo} alt="Kingdom Logo" className="h-16 w-auto" /> */}
+          <h1 className='text-4xl'>Kingdom</h1>
         </Link>
 
         {/* Desktop Nav */}

@@ -23,6 +23,7 @@ function App() {
   }, []);
 
   return (
+    
     <Router>
       {/* 👇 Place inside Router */}
       <ScrollToTop />
