@@ -1,20 +1,20 @@
 import React from "react";
 import { FaCheckCircle } from "react-icons/fa";
 
-const benefits = [
-  "Institutional Prestige through Signature Collaborations",
-  "Plug-and-Play Academic Enrichment Without Overhead",
-  "Academic Identity Building",
-  "Custom Certificate Co-Branding (College + Kingdom)",
-  "Strategic Differentiation for Deemed-to-be/Autonomous Status",
-  "Leadership Development for Faculty",
-  "Enhanced Student Employability",
-  "Access to Latest Industry Trends",
-  "Alumni Engagement Programs",
-  "CSR and Community Outreach",
-  "AI-Driven Personalized Learning Insights for the College",
-  "“Kingdom Edutech College Ambassador” Program",
-];
+// const benefits = [
+//   "Institutional Prestige through Signature Collaborations",
+//   "Plug-and-Play Academic Enrichment Without Overhead",
+//   "Academic Identity Building",
+//   "Custom Certificate Co-Branding (College + Kingdom)",
+//   "Strategic Differentiation for Deemed-to-be/Autonomous Status",
+//   "Leadership Development for Faculty",
+//   "Enhanced Student Employability",
+//   "Access to Latest Industry Trends",
+//   "Alumni Engagement Programs",
+//   "CSR and Community Outreach",
+//   "AI-Driven Personalized Learning Insights for the College",
+//   "“Kingdom Edutech College Ambassador” Program",
+// ];
 
 const InstitutionalCollaboration = () => {
   return (
