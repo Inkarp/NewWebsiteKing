@@ -22,9 +22,8 @@ const Header = () => {
 
   return (
     <header
-  className={`fixed top-0 left-1/2 transform -translate-x-1/2 w-[90%] z-50 bg-white transition-all duration-300 ease-in-out ${
-    scrolled ? 'shadow-md top-3 rounded-lg' : 'shadow-lg'
-  }`}
+      className={`fixed top-0 left-1/2 transform -translate-x-1/2  z-50 bg-white transition-all duration-300 ease-in-out ${scrolled ? 'shadow-md top-1 rounded-lg w-[96%]' : 'shadow-lg rounded-lg w-full'
+        }`}
 
 
       style={{ fontFamily: "'Playfair Display', serif" }}
@@ -33,7 +32,7 @@ const Header = () => {
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-2">
           {/* <img src={Logo} alt="Kingdom Logo" className="h-16 w-auto" /> */}
-          <h1 className='text-4xl'>Kingdom</h1>
+          <h1 className='text-4xl text-[#0b1f39]'>Kingdom</h1>
         </Link>
 
         {/* Desktop Nav */}
@@ -43,8 +42,7 @@ const Header = () => {
               key={link.name}
               to={link.path}
               className={({ isActive }) =>
-                `relative pb-1 transition-all duration-300 hover:text-blue-600 ${
-                  isActive ? 'text-blue-700 font-semibold' : ''
+                `relative pb-1 transition-all duration-300 hover:text-blue-600 ${isActive ? 'text-blue-700 font-semibold' : ''
                 }`
               }
             >
@@ -93,8 +91,7 @@ const Header = () => {
                 to={link.path}
                 onClick={() => setMobileMenuOpen(false)}
                 className={({ isActive }) =>
-                  `hover:text-blue-600 ${
-                    isActive ? 'text-blue-700 font-semibold' : ''
+                  `hover:text-blue-600 ${isActive ? 'text-blue-700 font-semibold' : ''
                   }`
                 }
               >

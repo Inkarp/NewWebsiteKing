@@ -4,7 +4,7 @@ import { FaQuoteLeft } from 'react-icons/fa';
 const testimonials = [
   {
     name: 'Ananya S.',
-    role: 'B.Sc Student, Hyderabad',
+    role: 'B.Sc Student, Vijayawada',
     quote:
       'Kingdom EdTech helped me discover my passion and guided me with a clear career path. The sessions were life-changing!',
     image: '/images/testimonial-1.jpg',
@@ -18,7 +18,7 @@ const testimonials = [
   },
   {
     name: 'Priya Mehta',
-    role: 'B.Com Graduate, Bangalore',
+    role: 'B.Com Graduate, Yellore',
     quote:
       'The resume-building and interview support got me my first internship. This is not just learning — it’s transformation.',
     image: '/images/testimonial-3.jpg',
@@ -27,7 +27,7 @@ const testimonials = [
 
 export default function Testimonials(){
   return (
-    <section className="bg-blue-50 py-20 px-6 md:px-20 mt-5">
+    <section className=" py-20 px-6 md:px-20 mt-5">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-blue-900 mb-4 font-serif tracking-tight">

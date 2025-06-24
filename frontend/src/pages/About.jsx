@@ -2,15 +2,15 @@ import FounderMessage from "./About/FounderMessage";
 import IntroSection from "./About/IntroSection";
 import MissionVision from "./About/MissionVision";
 import Philosophy from '/Phil.jpg';
+import { FaLightbulb, FaBookOpen, FaCompass } from 'react-icons/fa';
 
 export default function About() {
     return (
         <>
-            <section className="py-5 mt-10 px-4 md:px-10 bg-white">
+            <section className="py-5 mt-20 bg-gradient-to-r from-blue-50 to-yellow-50 py-20 px-4 md:px-10 ">
                 <div className="w-full mx-auto">
-
                     {/* Hero Heading */}
-                    <div className="text-center mb-16 bg-gradient-to-r from-blue-50 to-yellow-50 py-20 px-6 rounded-xl">
+                    <div className="text-center mb-16 bg-white py-20 px-6 rounded-xl">
                         <h1 className="text-4xl md:text-5xl font-bold text-blue-900 leading-tight mb-4">
                             More Than Education — A Purpose-Driven Mission
                         </h1>
@@ -61,14 +61,32 @@ export default function About() {
                         </div>
 
                         {/* Section 3: Value Highlights */}
-                        <div className="bg-gradient-to-r from-blue-100 via-white to-blue-100 p-10 rounded-2xl shadow-xl border-l-4 border-blue-600 w-full md:w-2/3 lg:w-1/2 mx-auto mb-20">
-                            <h2 className="text-2xl md:text-3xl font-extrabold text-blue-900 mb-6 font-serif tracking-tight text-center">
-                                What We Truly Stand For
+                        <div className="bg-gradient-to-br from-blue-50 via-white to-indigo-50 p-10 rounded-3xl shadow-2xl border-l-8 border-blue-600 w-full md:w-3/4 lg:w-2/3 mx-auto mb-20 transition-all duration-500">
+                            <h2 className="text-3xl md:text-4xl font-extrabold text-blue-900 mb-8 font-serif tracking-tight text-center relative inline-block">
+                                <span className="bg-gradient-to-r from-blue-200 to-transparent px-4 py-1 rounded-lg">
+                                    What We Truly Stand For
+                                </span>
                             </h2>
-                            <ul className="space-y-4 text-blue-800 text-lg font-medium leading-relaxed list-disc list-inside">
-                                <li><span className="font-semibold">We don’t just teach</span> — we inspire learning.</li>
-                                <li><span className="font-semibold">We don’t just train for exams</span> — we prepare for life.</li>
-                                <li><span className="font-semibold">We don’t just provide courses</span> — we show career paths with clarity and purpose.</li>
+
+                            <ul className="space-y-6 text-blue-900 text-lg font-medium leading-relaxed">
+                                <li className="flex items-start space-x-3">
+                                    <FaBookOpen className="text-blue-500 text-xl mt-1" />
+                                    <span>
+                                        <span className="font-semibold">We don’t just teach</span> — we inspire learning.
+                                    </span>
+                                </li>
+                                <li className="flex items-start space-x-3">
+                                    <FaLightbulb className="text-yellow-500 text-xl mt-1" />
+                                    <span>
+                                        <span className="font-semibold">We don’t just train for exams</span> — we prepare for life.
+                                    </span>
+                                </li>
+                                <li className="flex items-start space-x-3">
+                                    <FaCompass className="text-indigo-600 text-xl mt-1" />
+                                    <span>
+                                        <span className="font-semibold">We don’t just provide courses</span> — we show career paths with clarity and purpose.
+                                    </span>
+                                </li>
                             </ul>
                         </div>
                     </div>

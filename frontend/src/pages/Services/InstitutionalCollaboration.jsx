@@ -1,5 +1,6 @@
 import React from "react";
 import { FaCheckCircle } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const benefits = [
   // "Institutional Prestige through Signature Collaborations",
@@ -18,7 +19,7 @@ const benefits = [
 
 const InstitutionalCollaboration = () => {
   return (
-    <section className="bg-gradient-to-br from-blue-50 to-green-50 py-20 px-6 md:px-20">
+    <section className=" py-20 px-6 md:px-20 ">
       {/* Hero Quote */}
       <div className="max-w-5xl mx-auto mb-12 text-center">
         <h1 className="text-4xl md:text-5xl font-bold text-blue-900 leading-tight mb-6">
@@ -33,7 +34,7 @@ const InstitutionalCollaboration = () => {
       </div>
 
       {/* Benefits */}
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+      {/* <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
         {benefits.map((item, idx) => (
           <div
             key={idx}
@@ -43,16 +44,20 @@ const InstitutionalCollaboration = () => {
             <p className="text-gray-800 text-base font-medium">{item}</p>
           </div>
         ))}
-      </div>
+      </div> */}
 
       {/* Call to Action */}
-      <div className="text-center mt-16">
+      <div className="text-center bg-gray-300 py-10 rounded-full">
         <h3 className="text-2xl font-semibold text-blue-800 mb-4">
           Ready to Partner with Kingdom EdTech?
         </h3>
-        <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+        <Link
+          to="/contact"
+          className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white px-6 py-3 rounded-lg hover:brightness-110 transition duration-300 shadow-md"
+        >
           Contact Our Collaboration Team
-        </button>
+        </Link>
+
       </div>
     </section>
   );

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Logo from '/Logo.png';
 import CountUp from 'react-countup';
+import { Link } from 'react-router-dom';
 
 const slides = [
   {
@@ -39,7 +40,7 @@ const Hero = () => {
   return (
     <>
       {/* Hero Slider */}
-      <section className="w-full py-20 px-6 md:px-16 flex flex-col md:flex-row items-center justify-between">
+      <section className="w-full mt-17 py-20 px-6 md:px-16 flex flex-col md:flex-row items-center justify-between">
         {/* Quote Section */}
         <motion.div
           key={current}
@@ -52,20 +53,7 @@ const Hero = () => {
           <h1 className="text-3xl md:text-4xl font-bold text-blue-900 leading-snug">
             {slides[current].quote}
           </h1>
-          <div className="space-x-4">
-            <button
-              onClick={handlePrev}
-              className="bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded"
-            >
-              Prev
-            </button>
-            <button
-              onClick={handleNext}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded"
-            >
-              Next
-            </button>
-          </div>
+        
         </motion.div>
 
         {/* Image Section */}
@@ -85,7 +73,7 @@ const Hero = () => {
       </section>
 
       {/* CTA & Stats */}
-      <section className="relative bg-gradient-to-br from-purple-100 via-blue-100 to-green-50 py-20 px-6 md:px-16 overflow-hidden">
+      <section className="relative bg-black/20 rounded-full py-20 px-6 md:px-16 overflow-hidden">
         {/* Decorative Blurs */}
         <div className="absolute top-10 left-10 w-72 h-72 bg-blue-300/20 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-300/20 rounded-full blur-3xl"></div>
@@ -113,12 +101,12 @@ const Hero = () => {
             transition={{ delay: 0.3, duration: 0.5 }}
             className="flex justify-center gap-4 flex-wrap"
           >
-            <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:scale-105 transition">
+            <Link to="/services" className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:scale-105 transition">
               Browse Courses
-            </button>
-            <button className="border border-blue-600 text-blue-600 px-6 py-2 rounded-lg hover:bg-blue-50 transition">
+            </Link>
+            <Link to="/contact" className="border border-blue-600 text-blue-600 px-6 py-2 rounded-lg hover:bg-blue-50 transition">
               Contact Us
-            </button>
+            </Link>
           </motion.div>
         </div>
 
@@ -127,7 +115,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.6 }}
-          className="flex flex-col md:flex-row justify-center items-center gap-12 md:gap-20 w-full bg-white py-10 px-4 mt-12 rounded-xl text-blue-800 text-lg font-medium"
+          className="flex flex-col md:flex-row justify-center items-center gap-12 md:gap-20 w-[50%] mx-auto bg-white shadow-xl py-10 px-4 mt-12 rounded-xl text-blue-800 text-lg font-medium"
         >
           <StatBlock end={25} suffix="+" subtitle="Career Programs" />
           <StatBlock end={1000} suffix="+" subtitle="Students Empowered" />

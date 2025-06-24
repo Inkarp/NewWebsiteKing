@@ -69,7 +69,7 @@ const points = [
 export default function WhyChooseUs() {
     return (
         <>
-            <section className="bg-white py-16 px-6 md:px-16">
+            <section className=" py-16 px-6 md:px-16">
                 <div className="text-center mb-12">
                     <h2 className="text-4xl font-bold text-blue-900 mb-4">Why Choose Kingdom EdTech?</h2>
                     <p className="text-gray-700 max-w-2xl mx-auto">
