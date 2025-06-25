@@ -34,7 +34,7 @@ const Header = () => {
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-2">
           {/* <img src={Logo} alt="Kingdom Logo" className="h-16 w-auto" /> */}
-          <h1 className='text-4xl text-[#0b1f39]'>Kingdom</h1>
+      <Link to='/'>   <h1 className='text-4xl text-[#0b1f39]'>Kingdom</h1></Link> 
         </Link>
 
         {/* Desktop Nav */}
