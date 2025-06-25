@@ -141,39 +141,49 @@ const skills = [
 
 export default function TenthGrade() {
   return (
-    <section className="bg-blue-50 py-12 px-4">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-blue-900 text-center mb-6">
-          Kingdom Signature Skills for 10th Class Students
-        </h2>
-        <p className="text-center text-gray-600 italic mb-10">
-          Learn Early. Grow Strong. Lead the Future.
-        </p>
+  <section className="bg-gradient-to-b from-blue-50 to-white py-14 px-4 font-[Poppins]">
+    <div className="max-w-7xl mx-auto">
+      <h2
+        className="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-2"
+        style={{ fontFamily: "'Pacifico', cursive" }}
+      >
+        Kingdom Signature Skills for 10th Class Students
+      </h2>
+      <div className="w-60 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full mb-6" />
+      <p className="text-center text-gray-600 italic mb-10 text-lg">
+        Learn Early. Grow Strong. Lead the Future.
+      </p>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {skills.map((skill, index) => (
-            <div
-              key={index}
-              className="bg-white border border-blue-100 rounded-xl p-5 shadow hover:shadow-lg transition"
-            >
-              <h3 className="text-blue-700 text-sm font-semibold uppercase mb-1 tracking-wide">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {skills.map((skill, index) => (
+          <div
+            key={index}
+            className="bg-white border border-blue-100 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+          >
+            <div className="mb-3">
+              <span className="inline-block text-xs font-semibold bg-blue-100 text-blue-700 px-3 py-1 rounded-full uppercase tracking-wider">
                 {skill.name}
-              </h3>
-              <h4 className="text-lg font-bold text-blue-900 mb-2">
-                {skill.title}
-              </h4>
-              <p className="text-sm mb-2">
-                <span className="font-medium text-gray-600">What you learn:</span>{" "}
-                {skill.contents}
-              </p>
-              <p className="text-sm">
-                <span className="font-medium text-gray-600">Why it matters:</span>{" "}
-                {skill.outcome}
-              </p>
+              </span>
             </div>
-          ))}
-        </div>
+            <h4
+              className="text-lg font-bold text-blue-800 mb-2"
+              style={{ fontFamily: "'Pacifico', cursive" }}
+            >
+              {skill.title}
+            </h4>
+            <p className="text-sm mb-2">
+              <span className="font-medium text-gray-600">📘 What you learn:</span>{" "}
+              {skill.contents}
+            </p>
+            <p className="text-sm">
+              <span className="font-medium text-gray-600">🎯 Why it matters:</span>{" "}
+              {skill.outcome}
+            </p>
+          </div>
+        ))}
       </div>
-    </section>
-  );
+    </div>
+  </section>
+);
+
 }

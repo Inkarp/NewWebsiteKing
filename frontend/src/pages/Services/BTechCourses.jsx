@@ -54,43 +54,52 @@ export default function BTechCourses() {
   const [activeIndex, setActiveIndex] = useState(null);
 
   return (
-    <section className="bg-white py-14 px-4">
+    <section className="bg-gradient-to-br from-[#f7faff] to-white py-14 px-4 font-[Poppins]">
       <div className="max-w-6xl mx-auto">
+        {/* Heading Section */}
         <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-900">
+          <h2
+            className="text-3xl md:text-4xl font-bold text-blue-900"
+            style={{ fontFamily: "'Pacifico', cursive" }}
+          >
             Technology & Digital Skills for B.Tech Students
           </h2>
-          <p className="text-lg mt-2 text-gray-600 italic">
+          <div className="w-56 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full my-4" />
+          <p className="text-lg text-gray-600 italic leading-relaxed">
             "Not Just a Degree — A Real-World Skill Arsenal." <br />
             "Code. Create. Conquer." <br />
             "Learn Smart. Work Smarter. Win Bigger."
           </p>
-          <div className="mt-3 text-sm text-blue-700 font-semibold">
+          <div className="mt-3 text-sm text-blue-700 font-semibold tracking-wide">
             #FutureEngineer &nbsp; #LearnToLead &nbsp; #KingdomEdutech
           </div>
         </div>
 
+        {/* Expandable Course Cards */}
         <div className="grid md:grid-cols-2 gap-6">
           {techCourses.map((course, index) => (
             <div
               key={index}
-              className="border border-gray-200 bg-blue-50 rounded-xl p-5 shadow hover:shadow-md transition"
+              className="border border-blue-100 bg-white rounded-2xl p-5 shadow hover:shadow-xl hover:scale-[1.01] transition-all duration-300"
             >
               <div
                 className="cursor-pointer flex justify-between items-center"
                 onClick={() => setActiveIndex(activeIndex === index ? null : index)}
               >
-                <h3 className="text-lg font-semibold text-blue-800">
+                <h3
+                  className="text-lg font-semibold text-blue-800"
+                  style={{ fontFamily: "'Pacifico', cursive" }}
+                >
                   {course.title}
                 </h3>
-                <span className="text-blue-700 text-xl">
+                <span className="text-blue-600 text-2xl font-bold">
                   {activeIndex === index ? "−" : "+"}
                 </span>
               </div>
               {activeIndex === index && (
-                <ul className="mt-3 list-disc list-inside text-sm text-gray-700 space-y-1">
+                <ul className="mt-3 list-disc list-inside text-sm text-gray-700 space-y-1 pl-1">
                   {course.topics.map((topic, idx) => (
-                    <li key={idx}>{topic}</li>
+                    <li key={idx}>📘 {topic}</li>
                   ))}
                 </ul>
               )}
@@ -100,4 +109,5 @@ export default function BTechCourses() {
       </div>
     </section>
   );
+
 }

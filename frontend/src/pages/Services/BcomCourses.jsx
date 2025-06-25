@@ -75,27 +75,30 @@ export default function BcomCourses() {
       : courses.filter((course) => course.category === selectedCategory);
 
   return (
-    <section className="bg-gray-50 py-14 px-4">
+    <section className="bg-gradient-to-br from-[#f5f7fb] to-white py-14 px-4 font-[Poppins]">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-center text-blue-900 mb-4">
+        <h2
+          className="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-3"
+          style={{ fontFamily: "'Pacifico', cursive" }}
+        >
           Must-Learn Courses for B.Com (All Streams)
         </h2>
+        <div className="w-52 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full mb-6" />
         <p className="text-center text-gray-600 mb-10 text-lg">
           ✳ Kingdom Signature Programs –{" "}
           <span className="font-semibold">Practical | Career-Oriented | Job-Focused</span>
         </p>
 
-        {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-3 mb-8">
+        {/* Filter Tabs */}
+        <div className="flex flex-wrap justify-center gap-3 mb-10">
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
-              className={`px-4 py-1 rounded-full text-sm transition ${
-                selectedCategory === cat
-                  ? "bg-blue-800 text-white"
-                  : "bg-white border border-blue-800 text-blue-800"
-              }`}
+              className={`px-4 py-1.5 rounded-full text-sm font-medium tracking-wide transition duration-300 ${selectedCategory === cat
+                  ? "bg-gradient-to-r from-blue-700 to-purple-700 text-white shadow-md ring-2 ring-blue-300"
+                  : "bg-white border border-blue-600 text-blue-700 hover:bg-blue-100 hover:scale-105"
+                }`}
             >
               {cat}
             </button>
@@ -107,10 +110,16 @@ export default function BcomCourses() {
           {filteredCourses.map((course, index) => (
             <div
               key={index}
-              className="bg-white border border-gray-200 rounded-xl p-5 shadow hover:shadow-lg transition"
+              className="relative bg-white border border-blue-100 rounded-2xl p-6 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
             >
-              <h3 className="text-lg font-semibold text-blue-800 mb-1">
-                {index + 1}. {course.title}
+              <div className="absolute top-0 right-0 mt-2 mr-3 bg-blue-600 text-white text-xs px-2 py-1 rounded-full font-semibold shadow">
+                #{index + 1}
+              </div>
+              <h3
+                className="text-lg font-bold text-blue-800 mb-1"
+                style={{ fontFamily: "'Pacifico', cursive" }}
+              >
+                {course.title}
               </h3>
               <p className="text-sm mb-1">
                 <span className="font-medium text-gray-600">Contents:</span>{" "}
@@ -124,12 +133,10 @@ export default function BcomCourses() {
           ))}
         </div>
 
-        {/* Why It Matters */}
-        <div className="mt-12 p-6 bg-blue-100 text-blue-900 rounded-xl shadow-inner text-center">
-          <h4 className="text-xl font-semibold mb-2">
-            Why Are These Courses Important?
-          </h4>
-          <ul className="text-sm space-y-1">
+        {/* Why These Courses Matter */}
+        <div className="mt-14 p-6 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-900 rounded-xl shadow-inner text-center">
+          <h4 className="text-xl font-bold mb-2">Why Are These Courses Important?</h4>
+          <ul className="text-sm leading-relaxed space-y-1">
             <li>✅ Prepares for jobs in accounting, HR, and finance sectors</li>
             <li>✅ Makes you office-ready with Excel, GST, SAP, Communication</li>
             <li>✅ Helps crack competitive exams – Aptitude, Reasoning</li>
@@ -140,4 +147,5 @@ export default function BcomCourses() {
       </div>
     </section>
   );
+
 }

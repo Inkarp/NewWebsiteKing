@@ -215,37 +215,46 @@ export default function Intermediate() {
   const [activeTab, setActiveTab] = useState("CEC");
 
   return (
-    <section className="py-12 mt-10 px-4 bg-gradient-to-br from-[#f4f8fb] to-[#eef2f7] text-gray-800">
+    <section className="py-12 mt-10 px-4 bg-gradient-to-br from-[#f4f8fb] to-[#eef2f7] text-gray-800 font-[Poppins]">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
+        <h2
+          className="text-3xl md:text-4xl font-bold text-center mb-4 text-blue-900"
+          style={{ fontFamily: "'Pacifico', cursive" }}
+        >
           Courses for Intermediate Streams
         </h2>
+        <div className="w-40 h-1 bg-gradient-to-r from-blue-400 to-purple-500 mx-auto mb-8 rounded-full" />
 
         {/* Tabs */}
-        <div className="flex justify-center flex-wrap gap-4 mb-8">
+        <div className="flex justify-center flex-wrap gap-4 mb-10">
           {Object.keys(courseData).map((stream) => (
             <button
               key={stream}
-              className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
-                activeTab === stream
-                  ? "bg-blue-700 text-white shadow-md"
-                  : "bg-gray-200 text-gray-700 hover:bg-blue-100"
-              }`}
               onClick={() => setActiveTab(stream)}
+              className={`px-6 py-2 rounded-full text-sm font-semibold tracking-wide uppercase transition-all duration-300 ease-in-out transform 
+        ${activeTab === stream
+                  ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg scale-105 ring-2 ring-purple-300"
+                  : "bg-white text-blue-700 border border-blue-200 hover:bg-blue-100 hover:scale-105"
+                }`}
+              style={{ fontFamily: "'Poppins', sans-serif" }}
             >
               {stream}
             </button>
           ))}
         </div>
 
+
         {/* Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {courseData[activeTab].map((course, index) => (
             <div
               key={index}
-              className="bg-white shadow-lg rounded-xl p-5 border border-gray-100 hover:shadow-xl transition duration-300"
+              className="bg-white shadow-xl border border-blue-100 p-6 rounded-2xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 hover:border-blue-400"
             >
-              <h3 className="text-lg font-semibold mb-2 text-blue-800">
+              <h3
+                className="text-xl font-semibold text-blue-800 mb-2"
+                style={{ fontFamily: "'Pacifico', cursive" }}
+              >
                 {course.title}
               </h3>
               <p className="text-sm mb-1">
@@ -262,4 +271,5 @@ export default function Intermediate() {
       </div>
     </section>
   );
+
 }
