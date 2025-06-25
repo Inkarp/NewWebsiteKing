@@ -2,6 +2,7 @@ import FounderMessage from "./About/FounderMessage";
 import IntroSection from "./About/IntroSection";
 import MissionVision from "./About/MissionVision";
 import Philosophy from '/Phil.jpg';
+import Phil2 from "/Phil2.jpg"
 import { FaLightbulb, FaBookOpen, FaCompass } from 'react-icons/fa';
 
 export default function About() {
@@ -54,7 +55,7 @@ export default function About() {
 
                             {/* Image Second */}
                             <img
-                                src={Philosophy}
+                                src={Phil2}
                                 alt="Learning with clarity"
                                 className="w-full h-auto rounded-2xl shadow-xl object-cover"
                             />

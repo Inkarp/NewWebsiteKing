@@ -3,27 +3,32 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Logo from '/Logo.png';
 import CountUp from 'react-countup';
 import { Link } from 'react-router-dom';
+import Home1 from "/Home1.jpg"
+import Home2 from "/Home2.jpg"
+import Home3 from "/Home3.avif"
+import Home4 from "/Home4.jpg"
+import Home5 from "/Home5.webp"
 
 const slides = [
   {
     quote: `"Kingdom Edutech is not just an institute — it's a turning point.”`,
-    image: Logo,
+    image: Home1,
   },
   {
     quote: `"Real success begins when you learn what schools don’t teach.."`,
-    image: Logo,
+    image: Home2,
   },
   {
     quote: `“With the right skills, even an average student can build an extraordinary future.”`,
-    image: Logo,
+    image: Home3,
   },
   {
     quote: `“Don’t wait for the world to give you a chance — learn the skills to create your own.”`,
-    image: Logo,
+    image: Home3,
   },
   {
     quote: `“You don’t need to be a topper to lead. You just need the right direction.”`,
-    image: Logo,
+    image: Home5,
   },
 ];
 
@@ -48,7 +53,7 @@ const Hero = () => {
   return (
     <>
       {/* Hero Slider */}
-      <section className="w-full mt-17 py-20 px-6 md:px-16 flex flex-col md:flex-row items-center justify-between">
+      <section className="w-full mt-17 py-10 px-6 md:px-16  flex flex-col md:flex-row items-center justify-between">
         {/* Quote Section */}
         <motion.div
           key={current}
@@ -58,7 +63,7 @@ const Hero = () => {
           transition={{ duration: 0.6 }}
           className="md:w-1/2 text-center md:text-left space-y-6"
         >
-          <h1 className="text-3xl md:text-4xl font-bold text-blue-900 leading-snug">
+          <h1 className="text-3xl px-5 py-10 md:text-4xl font-bold text-blue-900 leading-snug">
             {slides[current].quote}
           </h1>
         
@@ -75,18 +80,18 @@ const Hero = () => {
           <img
             src={slides[current].image}
             alt="Hero Slide"
-            className="w-full h-80 object-contain rounded-lg shadow-lg"
+            className="w-full h-80 object-contain "
           />
         </motion.div>
       </section>
 
       {/* CTA & Stats */}
-      <section className="relative bg-black/20 rounded-full py-20 px-6 md:px-16 overflow-hidden">
+      <section className="relative mt-5 bg-black/20 rounded-full py-20 px-6 md:px-16 overflow-hidden">
         {/* Decorative Blurs */}
         <div className="absolute top-10 left-10 w-72 h-72 bg-blue-300/20 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-300/20 rounded-full blur-3xl"></div>
 
-        <div className="relative z-10 text-center max-w-3xl mx-auto">
+        <div className="relative z-10  text-center max-w-3xl mx-auto">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

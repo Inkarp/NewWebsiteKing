@@ -3,7 +3,10 @@ import Logo from '/Logo.png';
 import { NavLink, Link } from 'react-router-dom';
 import { FaBars, FaPhoneAlt, FaTimes, FaDownload } from 'react-icons/fa';
 
+
 const Header = () => {
+
+  const brocher = "/broucher.pdf";
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -22,7 +25,7 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-1/2 transform -translate-x-1/2  z-50  transition-all duration-300 ease-in-out ${scrolled ? 'shadow-md top-1 rounded-lg w-[96%]' : 'bg-gray-300 shadow-lg rounded-lg w-full'
+      className={`fixed top-0 left-1/2 transform -translate-x-1/2  z-50  transition-all duration-300 ease-in-out ${scrolled ? 'shadow-md bg-gray-100 top-1 rounded-lg w-[96%]' : 'bg-gray-200 shadow-lg rounded-lg w-full'
         }`}
 
       style={{ fontFamily: "'Playfair Display', serif" }}
@@ -61,14 +64,17 @@ const Header = () => {
             <FaPhoneAlt className="text-sm" />
             <span>Call Now</span>
           </a>
+
+
           <a
-            href="/KingdomBrochure.pdf"
+            href={brocher}
             download
             className="flex items-center bg-white border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-5 py-2 rounded-full shadow-md space-x-2 transition"
           >
             <FaDownload />
             <span>Download Brochure</span>
           </a>
+
         </div>
 
         {/* Mobile Menu Button */}
@@ -106,7 +112,7 @@ const Header = () => {
               <span>Call Now</span>
             </a>
             <a
-              href="/KingdomBrochure.pdf"
+              href={brocher}
               download
               className="flex items-center bg-white border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-5 py-2 rounded-full shadow-md space-x-2 transition"
             >

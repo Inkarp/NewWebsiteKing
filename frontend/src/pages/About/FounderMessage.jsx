@@ -1,14 +1,15 @@
 import React from 'react';
 import Logo from "/Logo.png"
+import Benny from '/Benny.png'
 
 export default function FounderMessage() {
   return (
-    <section className="py-5 px-6 md:px-16">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10">
+    <section className="py-5  md:px-16">
+      <div className=" mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10">
         {/* Founder Image */}
         <div className="flex justify-center">
           <img
-            src='https://www.inkarp.co.in/assets/images/our_team/K.Natesh.jpeg'
+            src={Benny}
             alt="Founder Benny Shyameul"
             className="rounded-xl shadow-lg w-72 h-auto object-cover"
           />
