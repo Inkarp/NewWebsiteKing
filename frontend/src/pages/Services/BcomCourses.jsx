@@ -75,16 +75,16 @@ export default function BcomCourses() {
       : courses.filter((course) => course.category === selectedCategory);
 
   return (
-    <section className="bg-gradient-to-br from-[#f5f7fb] to-white py-14 px-4 font-[Poppins]">
+    <section className="bg-gradient-to-br from-[#f5f7fb] to-white py-14 px-4" style={{ fontFamily: "'Inter', sans-serif" }}>
       <div className="max-w-6xl mx-auto">
         <h2
           className="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-3"
-          style={{ fontFamily: "'Pacifico', cursive" }}
+          style={{ fontFamily: "'Playfair Display', serif" }}
         >
           Must-Learn Courses for B.Com (All Streams)
         </h2>
         <div className="w-52 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full mb-6" />
-        <p className="text-center text-gray-600 mb-10 text-lg">
+        <p className="text-center text-gray-600 mb-10 text-lg" style={{ fontFamily: "'Inter', sans-serif" }}>
           ✳ Kingdom Signature Programs –{" "}
           <span className="font-semibold">Practical | Career-Oriented | Job-Focused</span>
         </p>
@@ -99,6 +99,7 @@ export default function BcomCourses() {
                   ? "bg-gradient-to-r from-blue-700 to-purple-700 text-white shadow-md ring-2 ring-blue-300"
                   : "bg-white border border-blue-600 text-blue-700 hover:bg-blue-100 hover:scale-105"
                 }`}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               {cat}
             </button>
@@ -112,20 +113,20 @@ export default function BcomCourses() {
               key={index}
               className="relative bg-white border border-blue-100 rounded-2xl p-6 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
             >
-              <div className="absolute top-0 right-0 mt-2 mr-3 bg-blue-600 text-white text-xs px-2 py-1 rounded-full font-semibold shadow">
+              <div className="absolute top-0 right-0 mt-2 mr-3 bg-blue-600 text-white text-xs px-2 py-1 rounded-full font-semibold shadow" style={{ fontFamily: "'Inter', sans-serif" }}>
                 #{index + 1}
               </div>
               <h3
                 className="text-lg font-bold text-blue-800 mb-1"
-                style={{ fontFamily: "'Pacifico', cursive" }}
+                style={{ fontFamily: "'Playfair Display', serif" }}
               >
                 {course.title}
               </h3>
-              <p className="text-sm mb-1">
+              <p className="text-sm mb-1" style={{ fontFamily: "'Inter', sans-serif" }}>
                 <span className="font-medium text-gray-600">Contents:</span>{" "}
                 {course.contents}
               </p>
-              <p className="text-sm">
+              <p className="text-sm" style={{ fontFamily: "'Inter', sans-serif" }}>
                 <span className="font-medium text-gray-600">Outcome:</span>{" "}
                 {course.outcome}
               </p>
@@ -135,8 +136,8 @@ export default function BcomCourses() {
 
         {/* Why These Courses Matter */}
         <div className="mt-14 p-6 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-900 rounded-xl shadow-inner text-center">
-          <h4 className="text-xl font-bold mb-2">Why Are These Courses Important?</h4>
-          <ul className="text-sm leading-relaxed space-y-1">
+          <h4 className="text-xl font-bold mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>Why Are These Courses Important?</h4>
+          <ul className="text-sm leading-relaxed space-y-1" style={{ fontFamily: "'Inter', sans-serif" }}>
             <li>✅ Prepares for jobs in accounting, HR, and finance sectors</li>
             <li>✅ Makes you office-ready with Excel, GST, SAP, Communication</li>
             <li>✅ Helps crack competitive exams – Aptitude, Reasoning</li>

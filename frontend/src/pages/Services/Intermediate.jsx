@@ -215,11 +215,11 @@ export default function Intermediate() {
   const [activeTab, setActiveTab] = useState("CEC");
 
   return (
-    <section className="py-12 mt-10 px-4 bg-gradient-to-br from-[#f4f8fb] to-[#eef2f7] text-gray-800 font-[Poppins]">
+    <section className="py-12 mt-10 px-4 bg-gradient-to-br from-[#f4f8fb] to-[#eef2f7] text-gray-800" style={{ fontFamily: "'Inter', sans-serif" }}>
       <div className="max-w-7xl mx-auto">
         <h2
           className="text-3xl md:text-4xl font-bold text-center mb-4 text-blue-900"
-          style={{ fontFamily: "'Pacifico', cursive" }}
+          style={{ fontFamily: "'Playfair Display', serif" }}
         >
           Courses for Intermediate Streams
         </h2>
@@ -236,7 +236,7 @@ export default function Intermediate() {
                   ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg scale-105 ring-2 ring-purple-300"
                   : "bg-white text-blue-700 border border-blue-200 hover:bg-blue-100 hover:scale-105"
                 }`}
-              style={{ fontFamily: "'Poppins', sans-serif" }}
+              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               {stream}
             </button>
@@ -253,15 +253,15 @@ export default function Intermediate() {
             >
               <h3
                 className="text-xl font-semibold text-blue-800 mb-2"
-                style={{ fontFamily: "'Pacifico', cursive" }}
+                style={{ fontFamily: "'Playfair Display', serif" }}
               >
                 {course.title}
               </h3>
-              <p className="text-sm mb-1">
+              <p className="text-sm mb-1" style={{ fontFamily: "'Inter', sans-serif" }}>
                 <span className="font-medium text-gray-600">Contents:</span>{" "}
                 {course.contents}
               </p>
-              <p className="text-sm">
+              <p className="text-sm" style={{ fontFamily: "'Inter', sans-serif" }}>
                 <span className="font-medium text-gray-600">Outcome:</span>{" "}
                 {course.outcome}
               </p>

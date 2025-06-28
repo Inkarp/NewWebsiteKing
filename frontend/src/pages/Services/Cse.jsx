@@ -139,17 +139,17 @@ export default function Cse() {
   const [expanded, setExpanded] = useState(null);
 
   return (
-    <section className="bg-gradient-to-br from-[#f0f4fa] to-white py-14 px-4 font-[Poppins]">
+    <section className="bg-gradient-to-br from-[#f0f4fa] to-white py-14 px-4" style={{ fontFamily: "'Inter', sans-serif" }}>
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <h2
           className="text-4xl font-bold text-center mb-4 text-blue-900"
-          style={{ fontFamily: "'Pacifico', cursive" }}
+          style={{ fontFamily: "'Playfair Display', serif" }}
         >
           Kingdom Signature Programs for B.Sc. (Computer Science)
         </h2>
         <div className="w-48 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full mb-6" />
-        <p className="text-center text-gray-600 text-lg italic mb-10">
+        <p className="text-center text-gray-600 text-lg italic mb-10" style={{ fontFamily: "'Inter', sans-serif" }}>
           ― Learn. Build. Transform. ―
         </p>
 
@@ -166,17 +166,17 @@ export default function Cse() {
               >
                 <h3
                   className="text-lg font-semibold text-blue-800 group-hover:underline"
-                  style={{ fontFamily: "'Pacifico', cursive" }}
+                  style={{ fontFamily: "'Playfair Display', serif" }}
                 >
                   {index + 1}. {course.title}
                 </h3>
-                <p className="text-sm text-gray-600 mt-1 transition-all">
+                <p className="text-sm text-gray-600 mt-1 transition-all" style={{ fontFamily: "'Inter', sans-serif" }}>
                   {expanded === index
                     ? course.contents
                     : course.contents.split(",").slice(0, 2).join(", ") + "..."}
                 </p>
                 {expanded === index && (
-                  <div className="mt-3 text-sm">
+                  <div className="mt-3 text-sm" style={{ fontFamily: "'Inter', sans-serif" }}>
                     <p className="text-blue-800 font-medium">
                       📘 Outcome:
                       <span className="text-gray-700 font-normal ml-1">
@@ -192,8 +192,8 @@ export default function Cse() {
 
         {/* Outcome Summary Box */}
         <div className="mt-14 p-6 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-900 rounded-xl shadow-inner text-center">
-          <h4 className="text-xl font-bold mb-2">Why is this package important?</h4>
-          <ul className="text-sm leading-relaxed space-y-1">
+          <h4 className="text-xl font-bold mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>Why is this package important?</h4>
+          <ul className="text-sm leading-relaxed space-y-1" style={{ fontFamily: "'Inter', sans-serif" }}>
             <li>✅ Job-Ready in IT Sector – Developer, Analyst, QA, Support</li>
             <li>✅ Competitive Exam Prep – Aptitude, English, Reasoning</li>
             <li>✅ Freelancing Income – Web, App, SEO, Digital</li>

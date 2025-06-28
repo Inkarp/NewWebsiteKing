@@ -141,16 +141,16 @@ const skills = [
 
 export default function TenthGrade() {
   return (
-  <section className="bg-gradient-to-b from-blue-50 to-white py-14 px-4 font-[Poppins]">
+  <section className="bg-gradient-to-b from-blue-50 to-white py-14 px-4" style={{ fontFamily: "'Inter', sans-serif" }}>
     <div className="max-w-7xl mx-auto">
       <h2
         className="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-2"
-        style={{ fontFamily: "'Pacifico', cursive" }}
+        style={{ fontFamily: "'Playfair Display', serif" }}
       >
         Kingdom Signature Skills for 10th Class Students
       </h2>
       <div className="w-60 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full mb-6" />
-      <p className="text-center text-gray-600 italic mb-10 text-lg">
+      <p className="text-center text-gray-600 italic mb-10 text-lg" style={{ fontFamily: "'Inter', sans-serif" }}>
         Learn Early. Grow Strong. Lead the Future.
       </p>
 
@@ -161,21 +161,21 @@ export default function TenthGrade() {
             className="bg-white border border-blue-100 rounded-2xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
           >
             <div className="mb-3">
-              <span className="inline-block text-xs font-semibold bg-blue-100 text-blue-700 px-3 py-1 rounded-full uppercase tracking-wider">
+              <span className="inline-block text-xs font-semibold bg-blue-100 text-blue-700 px-3 py-1 rounded-full uppercase tracking-wider" style={{ fontFamily: "'Inter', sans-serif" }}>
                 {skill.name}
               </span>
             </div>
             <h4
               className="text-lg font-bold text-blue-800 mb-2"
-              style={{ fontFamily: "'Pacifico', cursive" }}
+              style={{ fontFamily: "'Playfair Display', serif" }}
             >
               {skill.title}
             </h4>
-            <p className="text-sm mb-2">
+            <p className="text-sm mb-2" style={{ fontFamily: "'Inter', sans-serif" }}>
               <span className="font-medium text-gray-600">📘 What you learn:</span>{" "}
               {skill.contents}
             </p>
-            <p className="text-sm">
+            <p className="text-sm" style={{ fontFamily: "'Inter', sans-serif" }}>
               <span className="font-medium text-gray-600">🎯 Why it matters:</span>{" "}
               {skill.outcome}
             </p>

@@ -54,23 +54,23 @@ export default function BTechCourses() {
   const [activeIndex, setActiveIndex] = useState(null);
 
   return (
-    <section className="bg-gradient-to-br from-[#f7faff] to-white py-14 px-4 font-[Poppins]">
+    <section className="bg-gradient-to-br from-[#f7faff] to-white py-14 px-4" style={{ fontFamily: "'Inter', sans-serif" }}>
       <div className="max-w-6xl mx-auto">
         {/* Heading Section */}
         <div className="text-center mb-10">
           <h2
             className="text-3xl md:text-4xl font-bold text-blue-900"
-            style={{ fontFamily: "'Pacifico', cursive" }}
+            style={{ fontFamily: "'Playfair Display', serif" }}
           >
             Technology & Digital Skills for B.Tech Students
           </h2>
           <div className="w-56 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full my-4" />
-          <p className="text-lg text-gray-600 italic leading-relaxed">
+          <p className="text-lg text-gray-600 italic leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>
             "Not Just a Degree — A Real-World Skill Arsenal." <br />
             "Code. Create. Conquer." <br />
             "Learn Smart. Work Smarter. Win Bigger."
           </p>
-          <div className="mt-3 text-sm text-blue-700 font-semibold tracking-wide">
+          <div className="mt-3 text-sm text-blue-700 font-semibold tracking-wide" style={{ fontFamily: "'Inter', sans-serif" }}>
             #FutureEngineer &nbsp; #LearnToLead &nbsp; #KingdomEdutech
           </div>
         </div>
@@ -88,16 +88,16 @@ export default function BTechCourses() {
               >
                 <h3
                   className="text-lg font-semibold text-blue-800"
-                  style={{ fontFamily: "'Pacifico', cursive" }}
+                  style={{ fontFamily: "'Playfair Display', serif" }}
                 >
                   {course.title}
                 </h3>
-                <span className="text-blue-600 text-2xl font-bold">
+                <span className="text-blue-600 text-2xl font-bold" style={{ fontFamily: "'Inter', sans-serif" }}>
                   {activeIndex === index ? "−" : "+"}
                 </span>
               </div>
               {activeIndex === index && (
-                <ul className="mt-3 list-disc list-inside text-sm text-gray-700 space-y-1 pl-1">
+                <ul className="mt-3 list-disc list-inside text-sm text-gray-700 space-y-1 pl-1" style={{ fontFamily: "'Inter', sans-serif" }}>
                   {course.topics.map((topic, idx) => (
                     <li key={idx}>📘 {topic}</li>
                   ))}
