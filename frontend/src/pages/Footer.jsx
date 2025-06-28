@@ -9,7 +9,7 @@ export default function Footer() {
         {/* Brand Info */}
         <div>
           {/* <h3 className="text-xl font-bold mb-3">Kingdom EdTech</h3> */}
-            <img src={Logo} alt="Kingdom EdTech Logo" className="h-32 w-32 mb-3" />
+            <img src={Logo} alt="Kingdom EdTech Logo" className="h-32 w-54 mb-3" />
           <p className="text-sm">
             Empowering purpose-driven students with practical, life-oriented skills.
             <br />
@@ -44,7 +44,7 @@ export default function Footer() {
           <h4 className="font-semibold mb-3">Contact Us</h4>
           <p className="text-sm">📞 +91 76619 56771</p>
           <p className="text-sm">✉️ kingdomedutech@gmail.com</p>
-          <p className="text-sm mt-2">India</p>
+          <p className="text-sm mt-2">Eluru, WestGodavari<br />Andhra Pradesh</p>
         </div>
       </div>
 

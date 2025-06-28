@@ -24,7 +24,7 @@ const slides = [
   },
   {
     quote: `“Don’t wait for the world to give you a chance — learn the skills to create your own.”`,
-    image: Home3,
+    image: Home4,
   },
   {
     quote: `“You don’t need to be a topper to lead. You just need the right direction.”`,
@@ -38,7 +38,7 @@ const Hero = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
-    }, 5000);
+    }, 8000);
     return () => clearInterval(timer);
   }, []);
 

@@ -1,6 +1,7 @@
 import Hero from "./Home/Hero";
 import NewOfferings from "./Home/NewOfferings";
 import Offerings from "./Home/Offerings";
+import Orbit from "./Home/Orbit";
 import Testimonials from "./Home/Testimonials";
 import WhyChooseUs from "./Home/WhyChooseUs";
 import GraduatePrograms from "./Services/GraduatePrograms";
@@ -15,6 +16,7 @@ const Home = () => (
     <Hero />
     <WhyChooseUs />
     <Offerings />
+    <Orbit />
     <SkillCoursesSection />
     <InstitutionalCollaboration />
     <WhyKingdomIsDifferent />
