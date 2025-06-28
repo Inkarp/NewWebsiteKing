@@ -3,23 +3,13 @@ import Logo from '/Logo.png'
 
 
 const subsidiaries = [
-  { name: "Group Company",  },
-  { name: "Group Company",  },
-  { name: "Group Company",  },
-  { name: "Collaborative Venture ", },
-  { name: "Collaborative Venture ", },
-  {
-    name: "INKARP",
-    // text: [
-    //   "I - Innovative",
-    //   "N - Nurturing",
-    //   "K - Knowledge",
-    //   "A - Accountability",
-    //   "R - Reliability",
-    //   "P - Passion"
-    // ]
-    // text: ["Trusted Subsidiaries and Joint Ventures", "Powering Our Innovations"]
-  },
+  { name: "Career Guidance & Clarity\nMotivation & Personality Development ",  },
+  
+  { name: "Certification Courses & Placement-Oriented Training",  },
+  { name: "Parent Meetings\n Health & Mental Wellness Programs ", },
+  { name: "Internship & Project Support\nIndustry Expert Talks or Webinars", },
+  { name: "Entrepreneurship & Startup Training", },
+  { name: "\nCSR Partnership Help for College ",  },
 
   //left side 
   // { name: "I for", text: "INNOVATIVE" },
@@ -198,10 +188,10 @@ export default function Orbit() {
 
 
       <div className="text-3xl mt-10 sm:text-xl md:text-3xl font-semibold font-[MaxOT] text-black mb-4">
-        Our Group Companies & Collaborations
-        <h1>At INKARP, innovation is at the core of everything we do.
-        </h1>
-        <h3>Explore our subsidiaries and joint ventures that drive our shared vision forward.</h3>
+        <h3 className="text-4xl font-semibold text-blue-500 mb-8 text-center max-w-4xl mx-auto">
+        Partnering with institutions to build confident, career-ready youth
+        through life skills, digital knowledge, and personal development.
+      </h3>
       </div>
       <div className="circular-reviews__void">
         <ul style={{ "--count": subsidiaries.length }} className="crop" >

@@ -5,34 +5,35 @@ import { FaRocket, FaBriefcase, FaLightbulb } from 'react-icons/fa';
 const generalOfferings = [
   'Career Guidance & Clarity',
   'Motivation & Personality Development',
-  'Certification Courses & Placement-Oriented Training',
-  'Parent Meetings',
-  'Faculty Training & Development Programs',
-  'Health & Mental Wellness Programs',
-  'Earn While You Learn',
-  'Placement & Resume Preparation'
+  'Kingdom Signature Programs/\nCertification Courses for Real-World Skills ',
+  'Study Planning & Exam Support ',
+  'Job & Internship Support & Project Support ',
+  'Health,Mental Wellness Programs,Confidence Building ',
+  'Entrepreneurship & Startup Training ',
+  'Earn While You Learn  ',
+  'Placement & Resume Preparation '
 ];
 
 // Highlighted offerings
 const highlightedOfferings = [
-  {
-    title: 'Job & Internship Support & Project Support',
-    icon: <FaBriefcase />,
-    color: 'purple',
-    description: 'Boost career readiness through resume help, live projects, and mock interviews.'
-  },
-  {
-    title: 'Internship & Project Support',
-    icon: <FaRocket />,
-    color: 'green',
-    description: 'Hands-on opportunities through local business/NGO collaborations.'
-  },
-  {
-    title: 'Entrepreneurship & Startup Training',
-    icon: <FaLightbulb />,
-    color: 'yellow',
-    description: 'Learn business basics and become a future job creator.'
-  }
+  // {
+  //   title: 'Job & Internship Support & Project Support',
+  //   icon: <FaBriefcase />,
+  //   color: 'purple',
+  //   description: 'Boost career readiness through resume help, live projects, and mock interviews.'
+  // },
+  // {
+  //   title: 'Internship & Project Support',
+  //   icon: <FaRocket />,
+  //   color: 'green',
+  //   description: 'Hands-on opportunities through local business/NGO collaborations.'
+  // },
+  // {
+  //   title: 'Entrepreneurship & Startup Training',
+  //   icon: <FaLightbulb />,
+  //   color: 'yellow',
+  //   description: 'Learn business basics and become a future job creator.'
+  // }
 ];
 
 // Safe Tailwind class map
@@ -94,10 +95,7 @@ const Offerings = () => {
       </div>
 
       {/* Highlighted Unique Offerings */}
-      <h3 className="text-2xl font-semibold text-blue-500 mb-8 text-center max-w-4xl mx-auto">
-        Partnering with institutions to build confident, career-ready youth
-        through life skills, digital knowledge, and personal development.
-      </h3>
+      
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
         {highlightedOfferings.map((item, index) => {
