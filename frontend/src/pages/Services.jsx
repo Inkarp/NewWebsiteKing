@@ -63,13 +63,13 @@ export default function Services() {
 
         {/* Tab Navigation */}
         <div className="glass rounded-3xl p-3 shadow-2xl mb-8 animate-slide-in-right">
-          <div className="flex flex-wrap justify-center gap-2">
+          <div className="flex flex-wrap justify-center gap-5">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => handleTabChange(tab.id)}
                 className={`
-                  flex items-center gap-2 px-6 py-3 rounded-2xl font-semibold transition-all duration-500 transform hover:scale-105 hover:shadow-lg
+                  flex items-center gap-3 px-6 py-3 rounded-2xl font-semibold transition-all duration-500 transform hover:scale-105 hover:shadow-lg
                   ${activeTab === tab.id
                     ? `bg-gradient-to-r ${tab.color} text-white shadow-xl scale-105`
                     : 'bg-white/80 text-gray-700 hover:bg-white hover:text-blue-600 hover:shadow-md'
