@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Logo from '/Logo.png';
+import LogoNew from '/kingdomNew.png';
 import { NavLink, Link } from 'react-router-dom';
 import { FaBars, FaPhoneAlt, FaTimes, FaDownload } from 'react-icons/fa';
 
@@ -33,8 +34,8 @@ const Header = () => {
       <div className="px-6 py-3 flex items-center justify-between max-w-7xl mx-auto">
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-2">
-          {/* <img src={Logo} alt="Kingdom Logo" className="h-16 w-auto" /> */}
-      <Link to='/'>   <h1 className='text-4xl text-[#0b1f39]'>Kingdom</h1></Link> 
+          <img src={LogoNew} alt="Kingdom Logo" className="h-12 w-auto" />
+      {/* <Link to='/'>   <h1 className='text-4xl text-[#0b1f39]'>Kingdom</h1></Link>  */}
         </Link>
 
         {/* Desktop Nav */}
