@@ -23,7 +23,8 @@ const Contact = () => {
             </div>
             <div className="flex items-center space-x-3">
               <FaMapMarkerAlt className="text-blue-600" />
-              <span className="font-medium">India – Empowering Students Nationwide</span>
+              <span className="font-medium">Eluru, West Godavari
+                Andhra Pradesh</span>
             </div>
           </div>
         </div>
