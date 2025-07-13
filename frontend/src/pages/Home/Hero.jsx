@@ -11,7 +11,7 @@ import Home5 from "/Home5.webp"
 
 const slides = [
   {
-    quote: `"Kingdom Edutech is not just an institute — it's a turning point.”`,
+    quote: `"Kingdom Edutech is not just an institute it's a turning point.”`,
     image: Home1,
   },
   {
@@ -23,7 +23,7 @@ const slides = [
     image: Home3,
   },
   {
-    quote: `“Don’t wait for the world to give you a chance — learn the skills to create your own.”`,
+    quote: `“Don’t wait for the world to give you a chance learn the skills to create your own.”`,
     image: Home4,
   },
   {
@@ -119,7 +119,7 @@ const Hero = () => {
       </section>
 
       {/* CTA & Stats */}
-      <section className="relative mt-5 bg-black/20 rounded-full py-20 px-6 md:px-16 overflow-hidden">
+      <section className="relative w-[80%] mx-auto mt-5 bg-black/20 rounded-full py-20 px-6 md:px-16 overflow-hidden">
         {/* Decorative Blurs */}
         <div className="absolute top-10 left-10 w-72 h-72 bg-blue-300/20 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-300/20 rounded-full blur-3xl"></div>

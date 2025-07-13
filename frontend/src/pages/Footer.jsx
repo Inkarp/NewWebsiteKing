@@ -10,7 +10,7 @@ export default function Footer() {
         {/* Brand Info */}
         <div>
           {/* <h3 className="text-xl font-bold mb-3">Kingdom EdTech</h3> */}
-            <img src={LogoNew} alt="Kingdom EdTech Logo" className="h-24 w-54 bg-white " />
+          <img src={LogoNew} alt="Kingdom EdTech Logo" className="h-24 w-54 bg-white " />
           <p className="text-xs">
             Empowering purpose-driven students with practical, life-oriented skills.
             <br />
@@ -33,10 +33,10 @@ export default function Footer() {
         <div>
           <h4 className="font-semibold mb-3">Programs</h4>
           <ul className="space-y-2 text-sm">
-            <li>Career Guidance</li>
-            <li>Digital Marketing</li>
-            <li>Spoken English</li>
-            <li>Life Skills</li>
+            <Link to="/services?tab=tenth"><li className='hover:underline'>10th stars</li></Link>
+            <Link to="/services?tab=intermediate"><li className='hover:underline'>+2 birds</li></Link>
+            <Link to="/services?tab=btech"><li className='hover:underline'>Graduates for all pg streams</li></Link>
+            <Link to="/services?tab=mba"><li className='hover:underline'>Skill based courses</li></Link>
           </ul>
         </div>
 

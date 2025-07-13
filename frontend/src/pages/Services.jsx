@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 import BcomCourses from "./Services/BcomCourses";
 import BTechCourses from "./Services/BTechCourses";
 import Cse from "./Services/Cse";
@@ -8,6 +9,7 @@ import MBAFinanceCourses from "./Services/MBAFinanceCourses";
 import TenthGrade from "./Services/TenthGrade";
 
 export default function Services() {
+  const [searchParams, setSearchParams] = useSearchParams();
   const [activeTab, setActiveTab] = useState("tenth");
   const [isLoading, setIsLoading] = useState(false);
 
@@ -24,9 +26,19 @@ export default function Services() {
   const ActiveComponent = tabs.find(tab => tab.id === activeTab)?.component;
   const activeTabData = tabs.find(tab => tab.id === activeTab);
 
+  // Handle URL parameters on component mount
+  useEffect(() => {
+    const tabParam = searchParams.get('tab');
+    if (tabParam && tabs.find(tab => tab.id === tabParam)) {
+      setActiveTab(tabParam);
+    }
+  }, [searchParams]);
+
   const handleTabChange = (tabId) => {
     setIsLoading(true);
     setActiveTab(tabId);
+    // Update URL with the new tab
+    setSearchParams({ tab: tabId });
     setTimeout(() => setIsLoading(false), 300);
   };
 
