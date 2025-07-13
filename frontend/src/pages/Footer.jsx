@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '/Logo.png';
+import LogoNew from '/kingdomNew.png';
 
 export default function Footer() {
   return (
@@ -9,8 +10,8 @@ export default function Footer() {
         {/* Brand Info */}
         <div>
           {/* <h3 className="text-xl font-bold mb-3">Kingdom EdTech</h3> */}
-            <img src={Logo} alt="Kingdom EdTech Logo" className="h-32 w-54 mb-3" />
-          <p className="text-sm">
+            <img src={LogoNew} alt="Kingdom EdTech Logo" className="h-24 w-54 bg-white " />
+          <p className="text-xs">
             Empowering purpose-driven students with practical, life-oriented skills.
             <br />
             #LearnToday #LeadTomorrow

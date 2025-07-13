@@ -34,55 +34,88 @@ const slides = [
 
 const Hero = () => {
   const [current, setCurrent] = useState(0);
+  const [direction, setDirection] = useState(1); // 1 for next, -1 for prev
 
   useEffect(() => {
     const timer = setInterval(() => {
+      setDirection(1);
       setCurrent((prev) => (prev + 1) % slides.length);
     }, 8000);
     return () => clearInterval(timer);
   }, []);
 
   const handlePrev = () => {
+    setDirection(-1);
     setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
   const handleNext = () => {
+    setDirection(1);
     setCurrent((prev) => (prev + 1) % slides.length);
+  };
+
+  // Animation variants for sliding
+  const slideVariants = {
+    enter: (dir) => ({
+      x: dir > 0 ? 100 : -100,
+      opacity: 0,
+      position: 'absolute',
+    }),
+    center: {
+      x: 0,
+      opacity: 1,
+      position: 'relative',
+    },
+    exit: (dir) => ({
+      x: dir > 0 ? -100 : 100,
+      opacity: 0,
+      position: 'absolute',
+    }),
   };
 
   return (
     <>
       {/* Hero Slider */}
-      <section className="w-full mt-17 py-10 px-6 md:px-16  flex flex-col md:flex-row items-center justify-between">
+      <section className="w-full mt-17 py-10 px-6 md:px-16  flex flex-col md:flex-row items-center justify-between relative overflow-hidden">
         {/* Quote Section */}
-        <motion.div
-          key={current}
-          initial={{ opacity: 0, x: -30 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.6 }}
-          className="md:w-1/2 text-center md:text-left space-y-6"
-        >
-          <h1 className="text-3xl px-5 py-10 md:text-4xl font-bold text-blue-900 leading-snug">
-            {slides[current].quote}
-          </h1>
-        
-        </motion.div>
+        <div className="md:w-1/2 text-center md:text-left space-y-6 relative min-h-[180px] flex items-center justify-center">
+          <AnimatePresence custom={direction} mode="wait">
+            <motion.h1
+              key={current}
+              custom={direction}
+              variants={slideVariants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={{ duration: 0.7, type: 'spring', bounce: 0.2 }}
+              className="text-3xl px-5 py-10 md:text-4xl font-bold text-blue-900 leading-snug absolute w-full"
+            >
+              {slides[current].quote}
+            </motion.h1>
+          </AnimatePresence>
+        </div>
 
         {/* Image Section */}
-        <motion.div
-          key={`img-${current}`}
-          initial={{ opacity: 0, x: 30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-          className="md:w-1/2 mt-10 md:mt-0"
-        >
-          <img
-            src={slides[current].image}
-            alt="Hero Slide"
-            className="w-full h-80 object-contain "
-          />
-        </motion.div>
+        <div className="md:w-1/2 mt-10 md:mt-0 relative min-h-[320px] flex items-center justify-center">
+          <AnimatePresence custom={direction} mode="wait">
+            <motion.img
+              key={`img-${current}`}
+              src={slides[current].image}
+              alt="Hero Slide"
+              custom={direction}
+              variants={slideVariants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={{ duration: 0.7, type: 'spring', bounce: 0.2 }}
+              className="w-full h-80 object-contain absolute"
+            />
+          </AnimatePresence>
+        </div>
+
+        {/* Optional: Manual navigation buttons */}
+        {/* <button onClick={handlePrev} className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-2 shadow hover:bg-blue-100">Prev</button>
+        <button onClick={handleNext} className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 rounded-full p-2 shadow hover:bg-blue-100">Next</button> */}
       </section>
 
       {/* CTA & Stats */}

@@ -11,14 +11,14 @@ const testimonials = [
   },
   {
     name: 'Ravi Kumar',
-    role: '10th Grade Student, Vizag',
+    role: '10th Grade Student, Eluru',
     quote:
       'Their mentors not only motivated me but also taught me how to plan my study schedule and stay consistent.',
     image: '/images/testimonial-2.jpg',
   },
   {
     name: 'Priya Mehta',
-    role: 'B.Com Graduate, Yellore',
+    role: 'B.Com Graduate, Eluru',
     quote:
       'The resume-building and interview support got me my first internship. This is not just learning — it’s transformation.',
     image: '/images/testimonial-3.jpg',

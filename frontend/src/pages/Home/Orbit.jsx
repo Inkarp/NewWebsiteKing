@@ -1,5 +1,6 @@
 import React from "react";
 import Logo from '/Logo.png'
+import LogoNew from '/kingdomNew.png';
 
 
 const subsidiaries = [
@@ -223,7 +224,7 @@ export default function Orbit() {
           </ul>
           <div className="last-circle "></div>
           <div className="second-circle flex items-center justify-center">
-            <img src={Logo} alt="Inkarp Logo" className="w-[70%] h-auto object-contain" />
+            <img src={LogoNew} alt="Inkarp Logo" className="w-full h-auto object-cover" />
           </div>
         </div>
       </div>
