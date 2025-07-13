@@ -24,6 +24,22 @@ export default function Orbit() {
   return (
     <div className="circular-reviews__void" id="void">
       <style>{`
+        @media (max-width: 1023px) {
+          .circular-reviews__void .circular-desktop {
+            display: none !important;
+          }
+          .circular-reviews__void .cards-mobile {
+            display: flex !important;
+          }
+        }
+        @media (min-width: 1024px) {
+          .circular-reviews__void .circular-desktop {
+            display: block !important;
+          }
+          .circular-reviews__void .cards-mobile {
+            display: none !important;
+          }
+        }
         .circular-reviews__void {
           width: 100%;
           max-width: 1024px;
@@ -193,34 +209,36 @@ export default function Orbit() {
         through life skills, digital knowledge, and personal development.
       </h3>
       </div>
-      <div className="circular-reviews__void">
-        <ul style={{ "--count": subsidiaries.length }} className="crop" >
+      {/* Desktop Circular Layout */}
+      <div className="circular-desktop">
+        <div className="circular-reviews__void">
+          <ul style={{ "--count": subsidiaries.length }} className="crop" >
+            {subsidiaries.map((subsidiary, idx) => (
+              <li key={idx}>
+                <div className="card">
+                  <span className="model-name whitespace-pre-line">{subsidiary.name}</span>
+                </div>
+              </li>
+            ))}
+          </ul>
+          <div className="last-circle "></div>
+          <div className="second-circle flex items-center justify-center">
+            <img src={Logo} alt="Inkarp Logo" className="w-[70%] h-auto object-contain" />
+          </div>
+        </div>
+      </div>
+      {/* Mobile/Tablet Cards Layout */}
+      <div className="cards-mobile w-full flex flex-col items-center justify-center mt-6 gap-6 px-2" style={{ display: 'none' }}>
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
           {subsidiaries.map((subsidiary, idx) => (
-            <li key={idx}>
-              <div className="card">
-                <span className="model-name">{subsidiary.name}</span>
-                {subsidiary.text ? (
-                  <div className="inkarp-meaning">
-                    {subsidiary.text.map((line, i) => (
-                      <p key={i}>{line}</p>
-                    ))}
-                  </div>
-                ) : (
-                  <img src={subsidiary.image} className="w-full h-full object-cover" />
-                )}
-              </div>
-            </li>
+            <div key={idx} className="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center border border-gray-100">
+              <span className="font-bold text-lg text-blue-600 whitespace-pre-line">{subsidiary.name}</span>
+            </div>
           ))}
-        </ul>
-        <div className="last-circle ">
-
         </div>
-        <div className="second-circle flex items-center justify-center">
-          <img src={Logo} alt="Inkarp Logo" className="w-[70%] h-auto object-contain" />
+        <div className="flex items-center justify-center mt-4">
+          <img src={Logo} alt="Inkarp Logo" className="w-24 h-24 object-contain" />
         </div>
-        {/* <div className="center-circle flex items-center justify-center">
-          
-        </div> */}
       </div>
     </div>
   );

@@ -16,7 +16,7 @@ const financeCourses = [
 const stockCourses = [
   { title: "Stock Market Basics", contents: "NSE/BSE, indices, IPOs", outcome: "Understand Indian stock market structure" },
   { title: "Technical Analysis", contents: "Charts, indicators, candlesticks, support/resistance", outcome: "Predict stock price movements" },
-  { title: "Fundamental Analysis", contents: "Balance sheet, P&L, ratio analysis, valuation", outcome: "Analyze a company's financial health" },
+  { title: "Fundamental Analysis", contents: "Balance sheet, P&L, ratio analysis, valuation", outcome: "Analyze a company’s financial health" },
   { title: "Derivatives Market", contents: "Futures, options, hedging, arbitrage", outcome: "Understand complex instruments and risk management" },
   { title: "Portfolio Management", contents: "Risk-return, diversification, asset allocation", outcome: "Build and manage investment portfolios" },
   { title: "Behavioral Finance", contents: "Investor psychology, biases, decisions", outcome: "Understand behavior-driven market moves" },
@@ -31,10 +31,10 @@ export default function MBAFinanceCourses() {
   const data = activeTab === "Finance Courses" ? financeCourses : stockCourses;
 
   return (
-    <section className="bg-gradient-to-br from-white to-blue-50 py-14 px-4" style={{ fontFamily: "'Inter', sans-serif" }}>
+    <section className="bg-gradient-to-br from-white to-blue-50 py-14 px-4 font-[Poppins]">
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-3" style={{ fontFamily: "'Pacifico', cursive" }}>
           Kingdom Signature Finance Courses for MBA Students
         </h2>
         <div className="w-52 h-1 bg-gradient-to-r from-blue-700 to-indigo-600 mx-auto mb-10 rounded-full"></div>
@@ -50,7 +50,6 @@ export default function MBAFinanceCourses() {
                   ? "bg-gradient-to-r from-blue-800 to-purple-700 text-white shadow-md scale-105"
                   : "bg-white border border-blue-800 text-blue-800 hover:bg-blue-100"
               }`}
-              style={{ fontFamily: "'Inter', sans-serif" }}
             >
               {tab}
             </button>
@@ -61,16 +60,16 @@ export default function MBAFinanceCourses() {
         <div className="grid md:grid-cols-2 gap-6">
           {data.map((course, index) => (
             <div key={index} className="bg-white border border-blue-100 p-6 rounded-2xl shadow hover:shadow-xl hover:-translate-y-1 transition-all duration-300 relative">
-              <span className="absolute top-2 right-3 text-xs bg-blue-700 text-white px-2 py-0.5 rounded-full shadow" style={{ fontFamily: "'Inter', sans-serif" }}>
+              <span className="absolute top-2 right-3 text-xs bg-blue-700 text-white px-2 py-0.5 rounded-full shadow">
                 #{index + 1}
               </span>
-              <h3 className="text-lg font-bold text-blue-900 mb-1" style={{ fontFamily: "'Playfair Display', serif" }}>
+              <h3 className="text-lg font-bold text-blue-900 mb-1" style={{ fontFamily: "'Pacifico', cursive" }}>
                 {course.title}
               </h3>
-              <p className="text-sm mb-1 text-gray-700" style={{ fontFamily: "'Inter', sans-serif" }}>
+              <p className="text-sm mb-1 text-gray-700">
                 <span className="font-semibold text-gray-600">📘 Contents:</span> {course.contents}
               </p>
-              <p className="text-sm text-gray-700" style={{ fontFamily: "'Inter', sans-serif" }}>
+              <p className="text-sm text-gray-700">
                 <span className="font-semibold text-gray-600">🎯 Outcome:</span> {course.outcome}
               </p>
             </div>

@@ -87,9 +87,9 @@ const courses = [
 
 const SkillCoursesSection = () => {
   return (
-    <section className="py-20 px-6 md:px-16 bg-gradient-to-br from-blue-50 via-white to-pink-50" style={{ fontFamily: "'Inter', sans-serif" }}>
+    <section className="py-20 px-6 md:px-16 bg-gradient-to-br from-blue-50 via-white to-pink-50">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl font-bold text-center text-blue-900 mb-12 tracking-tight" style={{ fontFamily: "'Playfair Display', serif" }}>
+        <h2 className="text-4xl font-bold text-center text-blue-900 mb-12 font-serif tracking-tight">
           Skill-Based Training Programs
         </h2>
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
@@ -101,11 +101,11 @@ const SkillCoursesSection = () => {
               {/* Icon and Heading */}
               <div className="flex items-center space-x-3 mb-4">
                 {group.icon}
-                <h3 className="text-xl font-semibold text-gray-800" style={{ fontFamily: "'Playfair Display', serif" }}>{group.category}</h3>
+                <h3 className="text-xl font-semibold text-gray-800">{group.category}</h3>
               </div>
 
               {/* List */}
-              <ul className="list-disc pl-5 space-y-2 text-gray-700 text-sm md:text-base max-h-[300px] overflow-y-auto pr-2" style={{ fontFamily: "'Inter', sans-serif" }}>
+              <ul className="list-disc pl-5 space-y-2 text-gray-700 text-sm md:text-base max-h-[300px] overflow-y-auto pr-2">
                 {group.items.map((item, index) => (
                   <li
                     key={index}
